@@ -1,0 +1,1 @@
+web: java -jar target/dz-email-sender-0.0.1-SNAPSHOT.jar
