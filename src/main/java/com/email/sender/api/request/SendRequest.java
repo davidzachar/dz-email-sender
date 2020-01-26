@@ -7,7 +7,7 @@ public class SendRequest {
 
 	@Email
 	private String from;
-	@Email
+
 	private String to;
 	@Email
 	private String cc;
