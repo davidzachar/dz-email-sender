@@ -25,11 +25,6 @@ public class EmailSender {
 	
 	@Autowired
 	SendGrid sendGrid;
-
-	@GetMapping("/test")
-	public String test() {
-		return "Working";
-	}
 	
 	@PostMapping("/send")
 	public Response send(@Valid @RequestBody SendRequest req) {
