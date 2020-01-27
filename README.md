@@ -2,6 +2,10 @@
 
 Easy application for sending email using [SendGrid](https://sendgrid.com) and deployed to [Heroku](https://heroku.com)
 
+Technologies used:
+* Spring boot
+* REST
+
 ## Configuration
 
 Change the following in src/main/resources/application.properties to reflect your configuration
