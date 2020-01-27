@@ -3,15 +3,19 @@ package com.email.sender.api.request;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
+import com.email.sender.validation.CommaSeparatedEmails;
+
 public class SendRequest {
 
+	@NotBlank
 	@Email
 	private String from;
-
+	@NotBlank
+	@CommaSeparatedEmails
 	private String to;
-	@Email
+	@CommaSeparatedEmails
 	private String cc;
-	@Email
+	@CommaSeparatedEmails
 	private String bcc;
 	@NotBlank
 	private String subject;

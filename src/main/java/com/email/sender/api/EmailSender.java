@@ -12,13 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.email.sender.api.request.SendRequest;
+import com.email.sender.converter.ToSendGrid;
 import com.sendgrid.Method;
 import com.sendgrid.Request;
 import com.sendgrid.Response;
 import com.sendgrid.SendGrid;
 import com.sendgrid.helpers.mail.Mail;
-import com.sendgrid.helpers.mail.objects.Content;
-import com.sendgrid.helpers.mail.objects.Email;
 
 @Validated
 @RestController
@@ -34,8 +33,7 @@ public class EmailSender {
 	
 	@PostMapping("/send")
 	public Response send(@Valid @RequestBody SendRequest req) {
-		Content content = new Content("text/plain", req.getBody());
-        Mail mail = new Mail(new Email(req.getFrom()), req.getSubject(), new Email(req.getTo()), content);
+		Mail mail = ToSendGrid.convert(req);
         Request sgRequest = new Request();
         Response sgResponse = null;
         try {
