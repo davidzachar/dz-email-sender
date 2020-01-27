@@ -36,3 +36,15 @@ Here is the example object to send:
 	"body" : "Test Body"
 }
 ```
+
+Example object using all the availible values:
+```json
+{
+        "from": "example@test.com",
+        "to":"some@test.com",
+	"cc":"cc@test.com,anothercc@test.com",
+	"bcc":"bcc@test.com,anotherbcc@test.com",
+        "subject" : "Test Subject",
+        "body" : "Test Body"
+}
+```
