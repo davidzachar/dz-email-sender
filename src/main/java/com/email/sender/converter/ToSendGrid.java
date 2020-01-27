@@ -40,7 +40,7 @@ public class ToSendGrid {
 					list.add(new Email(email.trim()));
 			}
 		} else {
-			list.add(new Email(emails));
+			list.add(new Email(emails.trim()));
 		}
 		return list;
 	}
