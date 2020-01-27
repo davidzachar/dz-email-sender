@@ -14,9 +14,9 @@ spring.security.user.password=ENC(KDvnn3fWWlsJJiTiCmtkD8oiPuvhkXZ4hqX8JKONU6k=)
 Current configuration is encoded using jasypt encryptor with password stored in enviroment property trough Heroku config named ENC_PASS.
 
 Description of values:
-sprint.sendgrid.api-key - api-key to use genereted within your [SendGrid](https://sendgrid.com) account
-sprint.security.user.name - user for Basic Auth to access REST API of this application
-spring.security.user.password - password for Basic Auth to access RES API of this application
+* sprint.sendgrid.api-key - api-key to use genereted within your [SendGrid](https://sendgrid.com) account
+* sprint.security.user.name - user for Basic Auth to access REST API of this application
+* spring.security.user.password - password for Basic Auth to access RES API of this application
 
 ## Usage
 
